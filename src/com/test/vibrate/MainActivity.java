@@ -31,16 +31,16 @@ ToggleButton vibrateToggle;
     }
     @Override
     protected void onPause() {
+    	vibrateToggle.setChecked(false);
     	super.onPause();
     	v.cancel();
-    	vibrateToggle.setChecked(false);
-    	
     }
     @Override
     protected void onStop() {
+    	  v.cancel();
+      	vibrateToggle.setChecked(false);
         super.onStop();
-        v.cancel();
-    	vibrateToggle.setChecked(false);
+      
 
     }
 
